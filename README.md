@@ -1,6 +1,6 @@
 # Quarto Dashboards
 
-This repo has example Quarto dashboards (both R and Python). More information can be found in the official documentation[^readme-1] and the tutorial on YouTube.[^readme-2]
+This repo has example Quarto dashboards written in R. More information can be found in the official documentation[^readme-1] and the tutorial on YouTube.[^readme-2]
 
 [^readme-1]: [Quarto dashboards.](https://quarto.org/docs/dashboards/)
 
