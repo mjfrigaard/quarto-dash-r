@@ -1,5 +1,5 @@
 ---
-title: Quarto Dashboard
+title: Basic Quarto Dashboard
 author: Awesome user
 format: dashboard
 ---
