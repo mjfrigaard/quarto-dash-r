@@ -7,13 +7,15 @@ format:
     logo: img/quarto.png
     nav-buttons:
       - text: About
-        href: https://quarto.org/docs/dashboards/layout.html
+        href: https://quarto.org
+      - icon: github
+        href: https://github.com/mjfrigaard/quarto-dash-r
       - icon: wikipedia
         target: _blank
         href: https://www.wikipedia.org
 ---
 
-## Row {height=20%}
+## Row {height=33%}
 
 ### Column {width=30%}
 
@@ -28,10 +30,28 @@ format:
     logo: img/quarto.png
     nav-buttons:
       - text: About
-        href: https://quarto.org/docs/dashboards/layout.html
+        href: https://quarto.org
 ```
 
-## Row {height=20%}
+## Row {height=33%}
+
+### Column {width=30%}
+
+We can include icons with accompanying hyperlinks.
+
+### Column {width=70%}
+
+```yml
+format:
+  dashboard:
+    embed-resources: true
+    logo: img/quarto.png
+    nav-buttons:
+      - icon: github
+        href: https://github.com/mjfrigaard/quarto-dash-r
+```
+
+## Row {height=33%}
 
 ### Column {width=30%}
 

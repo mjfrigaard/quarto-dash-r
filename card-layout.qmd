@@ -1,7 +1,9 @@
 ---
 title: Basic Quarto Dashboard Layout
 subtitle: rows, columns, and cards
-format: dashboard
+format:
+  dashboard:
+    embed-resources: true
 ---
 
 ```{r}
