@@ -12,36 +12,36 @@ The dashboards in this repo have been adapted from a variety of sources.
 
 ### Basic row layout
 
-![](img/basic_row_layout.png)
-
 [basic-row-layout.qmd](https://github.com/mjfrigaard/quarto-dash-r/blob/main/basic-row-layout.qmd)
+
+![](img/basic_row_layout.png)
 
 ### Basic column layout
 
-![](img/basic_column_layout.png)
-
 [basic-column-layout.qmd](https://github.com/mjfrigaard/quarto-dash-r/blob/main/basic-column-layout.qmd)
+
+![](img/basic_column_layout.png)
 
 ### Column row layout
 
-![](img/column_row_layout.png)
-
 [column-row-layout.qmd](https://github.com/mjfrigaard/quarto-dash-r/blob/main/column-row-layout.qmd)
+
+![](img/column_row_layout.png)
 
 ### Card layout
 
-![](img/card_layout.png)
-
 [card-layout.qmd](https://github.com/mjfrigaard/quarto-dash-r/blob/main/card-layout.qmd)
+
+![](img/card_layout.png)
 
 ### Tabset layout
 
-![](img/tabset_layout.png)
-
 [tabset-layout.qmd](https://github.com/mjfrigaard/quarto-dash-r/blob/main/tabset-layout.qmd)
+
+![](img/tabset_layout.png)
 
 ### Navbar layout
 
-![](img/navbar_layout.png)
-
 [navbar-layout.qmd](https://github.com/mjfrigaard/quarto-dash-r/blob/main/navbar-layout.qmd)
+
+![](img/navbar_layout.png)
