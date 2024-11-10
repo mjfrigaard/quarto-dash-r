@@ -1,0 +1,51 @@
+---
+title: Quarto Dashboard Nav Buttons
+subtitle: including custom nav items
+format:
+  dashboard:
+    embed-resources: true
+    logo: img/quarto.png
+    nav-buttons:
+      - text: About
+        href: https://quarto.org/docs/dashboards/layout.html
+      - icon: wikipedia
+        target: _blank
+        href: https://www.wikipedia.org
+---
+
+## Row {height=20%}
+
+### Column {width=30%}
+
+This dashboard displays the Nav Items from the YAML frontmatter. 
+
+### Column {width=70%}
+
+```yaml
+format:
+  dashboard:
+    embed-resources: true
+    logo: img/quarto.png
+    nav-buttons:
+      - text: About
+        href: https://quarto.org/docs/dashboards/layout.html
+```
+
+## Row {height=20%}
+
+### Column {width=30%}
+
+We can also include other Nav Items: 
+
+### Column {width=70%}
+
+```yml
+format:
+  dashboard:
+    embed-resources: true
+    logo: img/quarto.png
+    nav-buttons:
+      - icon: wikipedia
+        target: _blank
+        href: https://www.wikipedia.org
+```

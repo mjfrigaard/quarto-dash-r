@@ -1,0 +1,30 @@
+---
+title: Quarto Dashboard Layouts
+subtitle: basic row layout
+format: 
+  dashboard:
+    embed-resources: true
+    orientation: rows
+---
+
+## Row 
+
+```{r}
+#| eval: false
+#| echo: true
+install.packages('tidyverse')
+```
+
+## Row 
+
+```{r}
+#| eval: false
+#| echo: true
+library(tidyverse)
+```
+
+```{r}
+tidyverse::tidyverse_logo()
+```
+
+

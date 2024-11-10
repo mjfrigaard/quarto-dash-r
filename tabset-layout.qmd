@@ -1,0 +1,60 @@
+---
+title: Quarto Dashboard Tabsets
+subtitle: Rows, columns, and tabsets
+format:
+  dashboard:
+    embed-resources: true
+    orientation: rows
+---
+
+```{r}
+#| label: setup
+library(gt)
+```
+
+
+## Row {.tabset}
+
+```{r}
+#| title: Install
+#| echo: true 
+#| eval: false
+install.packages('tidyverse')
+```
+
+```{r}
+#| title: Load
+#| echo: true 
+library(tidyverse)
+```
+
+```{r}
+#| title: Logo
+tidyverse_logo()
+```
+
+## Row {height=70%}
+
+### Column 
+
+```{r}
+#| title: Conflicts
+tidyverse_conflicts()
+```
+
+### Column {.tabset}
+
+```{r}
+#| title: Packages
+#| echo: false 
+#| eval: true
+tibble(packages = tidyverse_packages()) |> 
+  gt::gt()
+```
+
+```{r}
+#| title: Dependencies
+#| echo: false 
+#| eval: true
+tidyverse_deps() |> gt::gt()
+```

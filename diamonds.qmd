@@ -1,7 +1,9 @@
 ---
 title: "Diamonds Explorer"
 author: "Barkamian Analytics"
-format: dashboard
+format: 
+  dashboard:
+    embed-resources: true
 server: shiny
 ---
 

@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Barkamian Analytics">
 
-<title>Diamonds Explorer</title>
+<title>Quarto Dashboard Tabsets</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +18,40 @@ ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
 width: 0.8em;
 margin: 0 0.8em 0.2em -1em;  vertical-align: middle;
+}
+
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+{ counter-reset: source-line 0; }
+pre.numberSource code > span
+{ position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+{ content: counter(source-line);
+position: relative; left: -1em; text-align: right; vertical-align: baseline;
+border: none; display: inline-block;
+-webkit-touch-callout: none; -webkit-user-select: none;
+-khtml-user-select: none; -moz-user-select: none;
+-ms-user-select: none; user-select: none;
+padding: 0 4px; width: 4em;
+}
+pre.numberSource { margin-left: 3em; padding-left: 4px; }
+div.sourceCode
+{ }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -6210,12 +6243,12 @@ table.dataTable.dtr-inline.collapsed>tbody>tr>td.child,table.dataTable.dtr-inlin
 
 </head>
 
-<body class="quarto-dashboard dashboard-fill dashboard-sidebar fullcontent">
+<body class="quarto-dashboard dashboard-fill fullcontent">
 
 <header id="quarto-dashboard-header">
 <nav class="navbar navbar-expand-md slim" data-bs-theme="dark">
   <div class="navbar-container container-fluid">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-controls="dashboard-collapse" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler hidden" type="button" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-controls="dashboard-collapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>    
 
@@ -6223,255 +6256,1164 @@ table.dataTable.dtr-inline.collapsed>tbody>tr>td.child,table.dataTable.dtr-inlin
     <div class="navbar-brand-container">       
 
       <div class="navbar-title">
-        <div class="navbar-title-text"><a href="#">Diamonds Explorer</a></div>
+        <div class="navbar-title-text"><a href="#">Quarto Dashboard Tabsets</a></div>
+        <div class="navbar-subtitle">Rows, columns, and tabsets</div>
         
-        <div class="navbar-author">Barkamian Analytics</div>
       </div>
     </div>
-<div id="dashboard-collapse" class="navbar-collapse collapse"><ul class="navbar-nav navbar-nav-scroll me-auto" role="tablist"><li class="nav-item" role="presentation"><a id="tab-plot" class="nav-link active" data-bs-toggle="tab" role="tab" data-bs-target="#plot" data-scrolling="false" href="#plot" aria-controls="plot" aria-selected="true"><span class="nav-link-text">Plot</span></a></li><li class="nav-item" role="presentation"><a id="tab-data" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#data" data-scrolling="false" href="#data" aria-controls="data" aria-selected="false"><span class="nav-link-text">Data</span></a></li></ul></div></div>
+</div>
 </nav>
 </header>
-<div class="page-layout-custom quarto-dashboard-content bslib-gap-spacing html-fill-container bslib-page-fill quarto-dashboard-pages dashboard-sidebar-container">  
+<div class="page-layout-custom quarto-dashboard-content bslib-gap-spacing html-fill-container bslib-page-fill">  
 
-<div class="bslib-sidebar-layout html-fill-item html-fill-container" data-bslib-sidebar-open="desktop" data-bslib-sidebar-init="true" data-bslib-sidebar-border="false" data-bslib-sidebar-border-radius="false"><div class="main html-fill-container html-fill-item"><div class="sidebar-content html-fill-item html-fill-container">
-<div class="tab-content bslib-grid html-fill-item html-fill-container" style="display: grid; grid-template-columns: minmax(3em, 1fr);
+<div class="bslib-grid-item html-fill-item bslib-grid" data-layout="fill" style="display: grid; grid-template-rows: minmax(3em, 30fr) minmax(3em, 70fr); grid-auto-columns: minmax(0, 1fr);">
+<div class="card tabset bslib-card html-fill-container" data-bslib-card-init data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header dashboard-card-no-title bslib-navs-card-title">
+
+<ul class="nav nav-tabs card-header-tabs" role="tablist" data-tabsetid="card-tabset-1"><li class="nav-item" role="presentation"><a href="#card-tabset-1-1" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="Install" aria-selected="true" class="nav-link active">Install</a></li><li class="nav-item" role="presentation"><a href="#card-tabset-1-2" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="Load" aria-selected="false" class="nav-link">Load</a></li><li class="nav-item" role="presentation"><a href="#card-tabset-1-3" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="Logo" aria-selected="false" class="nav-link">Logo</a></li></ul></div>
+
+
+
+<div class="tab-content html-fill-item html-fill-container" data-tabset-id="card-tabset-1"><div class="tab-pane active show html-fill-item html-fill-container" role="tabpanel" id="card-tabset-1-1"><div class="card-body html-fill-item html-fill-container" data-title="Install">
+<div class="sourceCode cell-code html-fill-item html-fill-container" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&#39;tidyverse&#39;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div><div class="tab-pane html-fill-item html-fill-container" role="tabpanel" id="card-tabset-1-2"><div class="card-body html-fill-item html-fill-container" data-title="Load">
+<div class="sourceCode cell-code html-fill-item html-fill-container" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div><div class="tab-pane html-fill-item html-fill-container" role="tabpanel" id="card-tabset-1-3"><div class="card-body html-fill-item html-fill-container" data-title="Logo">
+<div class="cell-output cell-output-stdout html-fill-item html-fill-container">
+<pre><code>⬢ __  _    __   .    ⬡           ⬢  . 
+ / /_(_)__/ /_ ___  _____ _______ ___ 
+/ __/ / _  / // / |/ / -_) __(_-&lt;/ -_)
+\__/_/\_,_/\_, /|___/\__/_/ /___/\__/ 
+     ⬢  . /___/      ⬡      .       ⬢ </code></pre>
+</div>
+</div></div></div><bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z" /></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init>bslib.Card.initializeAllCards();</script></div>
+<div class="bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr) minmax(3em, 1fr);
 grid-auto-rows: minmax(0, 1fr);">
-<div id="plot" class="dashboard-page tab-pane show active html-fill-item html-fill-container" data-orientation="rows" aria-labelledby="tab-plot">
-<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, 1fr); grid-auto-columns: minmax(0, 1fr);">
-<div class="card cell html-fill-item html-fill-container bslib-card" data-bslib-card-init data-require-bs-caller="card()" data-full-screen="false">
+<div class="bslib-grid" style="display: grid; grid-template-rows: minmax(3em, 1fr); grid-auto-columns: minmax(0, 1fr);">
+<div class="card cell bslib-card html-fill-container" data-title="Conflicts" data-bslib-card-init data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header"><div class="card-title">Conflicts</div></div>
 <div class="card-body html-fill-item html-fill-container">
+<div class="cell-output cell-output-stdout html-fill-item html-fill-container">
+<pre><code>── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z" /></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init>bslib.Card.initializeAllCards();</script></div>
+</div><div class="card tabset bslib-card html-fill-container" data-bslib-card-init data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header dashboard-card-no-title bslib-navs-card-title">
+
+<ul class="nav nav-tabs card-header-tabs" role="tablist" data-tabsetid="card-tabset-3"><li class="nav-item" role="presentation"><a href="#card-tabset-3-1" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="Packages" aria-selected="true" class="nav-link active">Packages</a></li><li class="nav-item" role="presentation"><a href="#card-tabset-3-2" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="Dependencies" aria-selected="false" class="nav-link">Dependencies</a></li></ul></div>
+
+
+<div id="3ade8a4a-fb1d-4a6c-8409-ac45482d5fc9" class="hidden">
+
+</div>
+<div class="tab-content html-fill-item html-fill-container" data-tabset-id="card-tabset-3"><div class="tab-pane active show html-fill-item html-fill-container" role="tabpanel" id="card-tabset-3-1"><div class="card-body html-fill-item html-fill-container" data-title="Packages">
 <div class="cell-output-display html-fill-item html-fill-container">
-<div class="shiny-plot-output html-fill-item html-fill-container" id="plot" style="width:100%;height:400px;"></div>
-</div>
-</div>
-<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
-    <template>Expand</template>
-    <span class="bslib-full-screen-enter badge rounded-pill">
-        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z" /></svg>
-    </span>
-</bslib-tooltip><script data-bslib-card-init>bslib.Card.initializeAllCards();</script></div>
-</div>
-</div><div id="data" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-orientation="rows" aria-labelledby="tab-data">
-<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, 1fr); grid-auto-columns: minmax(0, 1fr);">
-<div class="card cell html-fill-item html-fill-container bslib-card" data-bslib-card-init data-require-bs-caller="card()" data-full-screen="false">
-<div class="card-body html-fill-item html-fill-container">
-<div class="cell-output-display html-fill-item html-fill-container no-overflow-x">
-<div id="data" class="shiny-html-output html-fill-item html-fill-container"></div>
-</div>
-</div>
-<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
-    <template>Expand</template>
-    <span class="bslib-full-screen-enter badge rounded-pill">
-        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z" /></svg>
-    </span>
-</bslib-tooltip><script data-bslib-card-init>bslib.Card.initializeAllCards();</script></div>
-<div id="3ade8a4a-fb1d-4a6c-8409-ac45482d5fc9" class="hidden html-fill-item html-fill-container">
-
-</div>
-</div>
-</div>
-</div>
-</div></div><aside id="bslib-sidebar-1" class="sidebar html-fill-container html-fill-item"><div class="html-fill-container html-fill-item">
-<div class="cell-output-display">
-<div class="form-group shiny-input-container no-baseline">
-<label class="control-label" id="sampleSize-label" for="sampleSize">Sample Size</label>
-<input class="js-range-slider" id="sampleSize" data-skin="shiny" data-min="1" data-max="53940" data-from="1000" data-step="500" data-grid="true" data-grid-num="9.80709090909091" data-grid-snap="false" data-prettify-separator="," data-prettify-enabled="true" data-keyboard="true" data-data-type="number">
-</div>
-</div>
-<div class="cell-output-display">
-<br>
-</div>
-<div class="cell-output-display">
-<div class="form-group shiny-input-container">
-<div class="checkbox">
-<label>
-<input id="jitter" type="checkbox" class="shiny-input-checkbox" checked="checked">
-<span>Jitter</span>
-</label>
-</div>
-</div>
-</div>
-<div class="cell-output-display">
-<div class="form-group shiny-input-container">
-<div class="checkbox">
-<label>
-<input id="smooth" type="checkbox" class="shiny-input-checkbox" checked="checked">
-<span>Smooth</span>
-</label>
-</div>
-</div>
-</div>
-<div class="cell-output-display no-overflow-x">
-<div class="form-group shiny-input-container">
-<label class="control-label" id="x-label" for="x">X</label>
-<div>
-<select id="x" class="shiny-input-select"><option value="carat" selected>carat</option>
-<option value="cut">cut</option>
-<option value="color">color</option>
-<option value="clarity">clarity</option>
-<option value="depth">depth</option>
-<option value="table">table</option>
-<option value="price">price</option>
-<option value="x">x</option>
-<option value="y">y</option>
-<option value="z">z</option></select>
-<script type="application/json" data-for="x" data-nonempty>{"plugins":["selectize-plugin-a11y"]}</script>
-</div>
-</div>
-</div>
-<div class="cell-output-display no-overflow-x">
-<div class="form-group shiny-input-container">
-<label class="control-label" id="y-label" for="y">Y</label>
-<div>
-<select id="y" class="shiny-input-select"><option value="carat">carat</option>
-<option value="cut" selected>cut</option>
-<option value="color">color</option>
-<option value="clarity">clarity</option>
-<option value="depth">depth</option>
-<option value="table">table</option>
-<option value="price">price</option>
-<option value="x">x</option>
-<option value="y">y</option>
-<option value="z">z</option></select>
-<script type="application/json" data-for="y" data-nonempty>{"plugins":["selectize-plugin-a11y"]}</script>
-</div>
-</div>
-</div>
-<div class="cell-output-display no-overflow-x">
-<div class="form-group shiny-input-container">
-<label class="control-label" id="color-label" for="color">Color</label>
-<div>
-<select id="color" class="shiny-input-select"><option value="None">None</option>
-<option value="carat">carat</option>
-<option value="cut">cut</option>
-<option value="color">color</option>
-<option value="clarity" selected>clarity</option>
-<option value="depth">depth</option>
-<option value="table">table</option>
-<option value="price">price</option>
-<option value="x">x</option>
-<option value="y">y</option>
-<option value="z">z</option></select>
-<script type="application/json" data-for="color" data-nonempty>{"plugins":["selectize-plugin-a11y"]}</script>
-</div>
-</div>
-</div>
-<div class="cell-output-display no-overflow-x">
-<div class="form-group shiny-input-container">
-<label class="control-label" id="facet_row-label" for="facet_row">Facet Row</label>
-<div>
-<select id="facet_row" class="shiny-input-select"><option value="." selected>None</option>
-<option value="cut">cut</option>
-<option value="color">color</option>
-<option value="clarity">clarity</option></select>
-<script type="application/json" data-for="facet_row" data-nonempty>{"plugins":["selectize-plugin-a11y"]}</script>
-</div>
-</div>
-</div>
-<div class="cell-output-display no-overflow-x">
-<div class="form-group shiny-input-container">
-<label class="control-label" id="facet_col-label" for="facet_col">Facet Column</label>
-<div>
-<select id="facet_col" class="shiny-input-select"><option value="." selected>None</option>
-<option value="cut">cut</option>
-<option value="color">color</option>
-<option value="clarity">clarity</option></select>
-<script type="application/json" data-for="facet_col" data-nonempty>{"plugins":["selectize-plugin-a11y"]}</script>
-</div>
-</div>
-</div>
-</div></aside>
-<button class="collapse-toggle" type="button" title="Toggle sidebar" aria-expanded="true" aria-controls="bslib-sidebar-1">
-    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16" class="bi bi-chevron-left collapse-icon" style="fill:currentColor;" aria-hidden="true" role="img">
-      <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
-    </svg>
-</button>
-<script data-bslib-sidebar-init>
-bslib.Sidebar.initCollapsibleAll()
-</script>
-</div>
-<p>
-<script type="application/shiny-prerendered" data-context="server-start">
-library(ggplot2)
-library(shiny)
-dataset <- diamonds
-</script>
- 
-<script type="application/shiny-prerendered" data-context="server">
-dataset <- reactive({
-  diamonds[sample(nrow(diamonds), input$sampleSize), ]
-})
-
-output$plot <- renderPlot({
-  p <- ggplot(
-    dataset(),
-    aes_string(x = input$x, y = input$y)
-  ) +
-    geom_point()
-
-  if (input$color != "None") {
-    p <- p + aes_string(color = input$color)
-  }
-
-  facets <- paste(input$facet_row, "~", input$facet_col)
-
-  if (facets != ". ~ .") {
-    p <- p + facet_grid(facets)
-  }
-
-  if (input$jitter) {
-    p <- p + geom_jitter()
-  }
-
-  if (input$smooth) {
-    p <- p + geom_smooth()
-  }
-
-  p
-})
-
-output$data <- renderTable({
-  dataset()
-})
-</script>
- 
-<script type="application/shiny-prerendered" data-context="server-extras">
-ojs_define <- function(..., .session = shiny::getDefaultReactiveDomain()) {
-  quos <- rlang::enquos(...)
-  vars <- rlang::list2(...)
-  nm <- names(vars)
-  if (is.null(nm)) {
-    nm <- rep_len("", length(vars))
-  }
-  mapply(function(q, nm, val) {
-    # Infer name, if possible
-    if (nm == "") {
-      tryCatch({
-        nm <- rlang::as_name(q)
-      }, error = function(e) {
-        code <- paste(collapse = "\n", deparse(rlang::f_rhs(q)))
-        stop("ojs_define() could not create a name for the argument: ", code)
-      })
-    }
-    .session$output[[nm]] <- val
-    outputOptions(.session$output, nm, suspendWhenHidden = FALSE)
-    .session$sendCustomMessage("ojs-export", list(name = nm))
-    NULL
-  }, quos, nm, vars, SIMPLIFY = FALSE, USE.NAMES = FALSE)
-  invisible()
+<div id="zgpcukisya" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;" class="html-fill-item html-fill-container">
+<style>#zgpcukisya table {
+font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
 }
-</script>
-</p>
-<!--html_preserve-->
-<script type="application/shiny-prerendered" data-context="dependencies">
-{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["ionrangeslider-javascript"]},{"type":"character","attributes":{},"value":["2.3.1"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/ionrangeslider"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/ion.rangeSlider.min.js"]},{"type":"NULL"},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["strftime"]},{"type":"character","attributes":{},"value":["0.9.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/strftime"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["strftime-min.js"]},{"type":"NULL"},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["ionrangeslider-css"]},{"type":"character","attributes":{},"value":["2.3.1"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/ionrangeslider"]}]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["css/ion.rangeSlider.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["htmltools-fill"]},{"type":"character","attributes":{},"value":["0.5.8.1"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["fill"]}]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["fill.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["htmltools"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["0.5.8.1"]}]}]}
-</script>
-<!--/html_preserve-->
-<!--html_preserve-->
-<script type="application/shiny-prerendered" data-context="execution_dependencies">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["packages"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["packages","version"]},"class":{"type":"character","attributes":{},"value":["data.frame"]},"row.names":{"type":"integer","attributes":{},"value":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55]}},"value":[{"type":"character","attributes":{},"value":["base","bslib","cachem","cli","colorspace","compiler","datasets","digest","dplyr","evaluate","fansi","fastmap","generics","ggplot2","glue","graphics","grDevices","grid","gtable","htmltools","htmlwidgets","httpuv","jquerylib","jsonlite","knitr","later","lifecycle","magrittr","memoise","methods","mime","munsell","pillar","pkgconfig","promises","R6","Rcpp","renv","rlang","rmarkdown","rstudioapi","sass","scales","shiny","stats","tibble","tidyselect","tools","utf8","utils","vctrs","withr","xfun","xtable","yaml"]},{"type":"character","attributes":{},"value":["4.4.1","0.8.0","1.1.0","3.6.3","2.1-1","4.4.1","4.4.1","0.6.37","1.1.4","1.0.1","1.0.6","1.2.0","0.1.3","3.5.1","1.8.0","4.4.1","4.4.1","4.4.1","0.3.6","0.5.8.1","1.6.4","1.6.15","0.1.4","1.8.9","1.48","1.3.2","1.0.4","2.0.3","2.0.1","4.4.1","0.12","0.5.1","1.9.0","2.0.3","1.3.0","2.5.1","1.0.13-1","1.0.11","1.1.4","2.29","0.17.1","0.4.9","1.3.0","1.9.1","4.4.1","3.2.1","1.2.1","4.4.1","1.2.4","4.4.1","0.6.5","3.0.2","0.49","1.8-4","2.3.10"]}]}]}
-</script>
-<!--/html_preserve-->
+#zgpcukisya thead, #zgpcukisya tbody, #zgpcukisya tfoot, #zgpcukisya tr, #zgpcukisya td, #zgpcukisya th {
+border-style: none;
+}
+#zgpcukisya p {
+margin: 0;
+padding: 0;
+}
+#zgpcukisya .gt_table {
+display: table;
+border-collapse: collapse;
+line-height: normal;
+margin-left: auto;
+margin-right: auto;
+color: #333333;
+font-size: 16px;
+font-weight: normal;
+font-style: normal;
+background-color: #FFFFFF;
+width: auto;
+border-top-style: solid;
+border-top-width: 2px;
+border-top-color: #A8A8A8;
+border-right-style: none;
+border-right-width: 2px;
+border-right-color: #D3D3D3;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #A8A8A8;
+border-left-style: none;
+border-left-width: 2px;
+border-left-color: #D3D3D3;
+}
+#zgpcukisya .gt_caption {
+padding-top: 4px;
+padding-bottom: 4px;
+}
+#zgpcukisya .gt_title {
+color: #333333;
+font-size: 125%;
+font-weight: initial;
+padding-top: 4px;
+padding-bottom: 4px;
+padding-left: 5px;
+padding-right: 5px;
+border-bottom-color: #FFFFFF;
+border-bottom-width: 0;
+}
+#zgpcukisya .gt_subtitle {
+color: #333333;
+font-size: 85%;
+font-weight: initial;
+padding-top: 3px;
+padding-bottom: 5px;
+padding-left: 5px;
+padding-right: 5px;
+border-top-color: #FFFFFF;
+border-top-width: 0;
+}
+#zgpcukisya .gt_heading {
+background-color: #FFFFFF;
+text-align: center;
+border-bottom-color: #FFFFFF;
+border-left-style: none;
+border-left-width: 1px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 1px;
+border-right-color: #D3D3D3;
+}
+#zgpcukisya .gt_bottom_border {
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+}
+#zgpcukisya .gt_col_headings {
+border-top-style: solid;
+border-top-width: 2px;
+border-top-color: #D3D3D3;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+border-left-style: none;
+border-left-width: 1px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 1px;
+border-right-color: #D3D3D3;
+}
+#zgpcukisya .gt_col_heading {
+color: #333333;
+background-color: #FFFFFF;
+font-size: 100%;
+font-weight: normal;
+text-transform: inherit;
+border-left-style: none;
+border-left-width: 1px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 1px;
+border-right-color: #D3D3D3;
+vertical-align: bottom;
+padding-top: 5px;
+padding-bottom: 6px;
+padding-left: 5px;
+padding-right: 5px;
+overflow-x: hidden;
+}
+#zgpcukisya .gt_column_spanner_outer {
+color: #333333;
+background-color: #FFFFFF;
+font-size: 100%;
+font-weight: normal;
+text-transform: inherit;
+padding-top: 0;
+padding-bottom: 0;
+padding-left: 4px;
+padding-right: 4px;
+}
+#zgpcukisya .gt_column_spanner_outer:first-child {
+padding-left: 0;
+}
+#zgpcukisya .gt_column_spanner_outer:last-child {
+padding-right: 0;
+}
+#zgpcukisya .gt_column_spanner {
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+vertical-align: bottom;
+padding-top: 5px;
+padding-bottom: 5px;
+overflow-x: hidden;
+display: inline-block;
+width: 100%;
+}
+#zgpcukisya .gt_spanner_row {
+border-bottom-style: hidden;
+}
+#zgpcukisya .gt_group_heading {
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+color: #333333;
+background-color: #FFFFFF;
+font-size: 100%;
+font-weight: initial;
+text-transform: inherit;
+border-top-style: solid;
+border-top-width: 2px;
+border-top-color: #D3D3D3;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+border-left-style: none;
+border-left-width: 1px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 1px;
+border-right-color: #D3D3D3;
+vertical-align: middle;
+text-align: left;
+}
+#zgpcukisya .gt_empty_group_heading {
+padding: 0.5px;
+color: #333333;
+background-color: #FFFFFF;
+font-size: 100%;
+font-weight: initial;
+border-top-style: solid;
+border-top-width: 2px;
+border-top-color: #D3D3D3;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+vertical-align: middle;
+}
+#zgpcukisya .gt_from_md > :first-child {
+margin-top: 0;
+}
+#zgpcukisya .gt_from_md > :last-child {
+margin-bottom: 0;
+}
+#zgpcukisya .gt_row {
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+margin: 10px;
+border-top-style: solid;
+border-top-width: 1px;
+border-top-color: #D3D3D3;
+border-left-style: none;
+border-left-width: 1px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 1px;
+border-right-color: #D3D3D3;
+vertical-align: middle;
+overflow-x: hidden;
+}
+#zgpcukisya .gt_stub {
+color: #333333;
+background-color: #FFFFFF;
+font-size: 100%;
+font-weight: initial;
+text-transform: inherit;
+border-right-style: solid;
+border-right-width: 2px;
+border-right-color: #D3D3D3;
+padding-left: 5px;
+padding-right: 5px;
+}
+#zgpcukisya .gt_stub_row_group {
+color: #333333;
+background-color: #FFFFFF;
+font-size: 100%;
+font-weight: initial;
+text-transform: inherit;
+border-right-style: solid;
+border-right-width: 2px;
+border-right-color: #D3D3D3;
+padding-left: 5px;
+padding-right: 5px;
+vertical-align: top;
+}
+#zgpcukisya .gt_row_group_first td {
+border-top-width: 2px;
+}
+#zgpcukisya .gt_row_group_first th {
+border-top-width: 2px;
+}
+#zgpcukisya .gt_summary_row {
+color: #333333;
+background-color: #FFFFFF;
+text-transform: inherit;
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+}
+#zgpcukisya .gt_first_summary_row {
+border-top-style: solid;
+border-top-color: #D3D3D3;
+}
+#zgpcukisya .gt_first_summary_row.thick {
+border-top-width: 2px;
+}
+#zgpcukisya .gt_last_summary_row {
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+}
+#zgpcukisya .gt_grand_summary_row {
+color: #333333;
+background-color: #FFFFFF;
+text-transform: inherit;
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+}
+#zgpcukisya .gt_first_grand_summary_row {
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+border-top-style: double;
+border-top-width: 6px;
+border-top-color: #D3D3D3;
+}
+#zgpcukisya .gt_last_grand_summary_row_top {
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+border-bottom-style: double;
+border-bottom-width: 6px;
+border-bottom-color: #D3D3D3;
+}
+#zgpcukisya .gt_striped {
+background-color: rgba(128, 128, 128, 0.05);
+}
+#zgpcukisya .gt_table_body {
+border-top-style: solid;
+border-top-width: 2px;
+border-top-color: #D3D3D3;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+}
+#zgpcukisya .gt_footnotes {
+color: #333333;
+background-color: #FFFFFF;
+border-bottom-style: none;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+border-left-style: none;
+border-left-width: 2px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 2px;
+border-right-color: #D3D3D3;
+}
+#zgpcukisya .gt_footnote {
+margin: 0px;
+font-size: 90%;
+padding-top: 4px;
+padding-bottom: 4px;
+padding-left: 5px;
+padding-right: 5px;
+}
+#zgpcukisya .gt_sourcenotes {
+color: #333333;
+background-color: #FFFFFF;
+border-bottom-style: none;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+border-left-style: none;
+border-left-width: 2px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 2px;
+border-right-color: #D3D3D3;
+}
+#zgpcukisya .gt_sourcenote {
+font-size: 90%;
+padding-top: 4px;
+padding-bottom: 4px;
+padding-left: 5px;
+padding-right: 5px;
+}
+#zgpcukisya .gt_left {
+text-align: left;
+}
+#zgpcukisya .gt_center {
+text-align: center;
+}
+#zgpcukisya .gt_right {
+text-align: right;
+font-variant-numeric: tabular-nums;
+}
+#zgpcukisya .gt_font_normal {
+font-weight: normal;
+}
+#zgpcukisya .gt_font_bold {
+font-weight: bold;
+}
+#zgpcukisya .gt_font_italic {
+font-style: italic;
+}
+#zgpcukisya .gt_super {
+font-size: 65%;
+}
+#zgpcukisya .gt_footnote_marks {
+font-size: 75%;
+vertical-align: 0.4em;
+position: initial;
+}
+#zgpcukisya .gt_asterisk {
+font-size: 100%;
+vertical-align: 0;
+}
+#zgpcukisya .gt_indent_1 {
+text-indent: 5px;
+}
+#zgpcukisya .gt_indent_2 {
+text-indent: 10px;
+}
+#zgpcukisya .gt_indent_3 {
+text-indent: 15px;
+}
+#zgpcukisya .gt_indent_4 {
+text-indent: 20px;
+}
+#zgpcukisya .gt_indent_5 {
+text-indent: 25px;
+}
+#zgpcukisya .katex-display {
+display: inline-flex !important;
+margin-bottom: 0.75em !important;
+}
+#zgpcukisya div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top table" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="header gt_col_headings">
+<th id="packages" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">packages</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="packages">broom</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="packages">conflicted</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="packages">cli</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="packages">dbplyr</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="packages">dplyr</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="packages">dtplyr</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="packages">forcats</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="packages">ggplot2</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="packages">googledrive</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="packages">googlesheets4</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="packages">haven</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="packages">hms</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="packages">httr</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="packages">jsonlite</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="packages">lubridate</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="packages">magrittr</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="packages">modelr</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="packages">pillar</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="packages">purrr</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="packages">ragg</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="packages">readr</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="packages">readxl</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="packages">reprex</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="packages">rlang</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="packages">rstudioapi</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="packages">rvest</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="packages">stringr</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="packages">tibble</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="packages">tidyr</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="packages">xml2</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="packages">tidyverse</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div></div><div class="tab-pane html-fill-item html-fill-container" role="tabpanel" id="card-tabset-3-2"><div class="card-body html-fill-item html-fill-container" data-title="Dependencies">
+<div class="cell-output-display html-fill-item html-fill-container">
+<div id="gcbilhjtjt" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;" class="html-fill-item html-fill-container">
+<style>#gcbilhjtjt table {
+font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+#gcbilhjtjt thead, #gcbilhjtjt tbody, #gcbilhjtjt tfoot, #gcbilhjtjt tr, #gcbilhjtjt td, #gcbilhjtjt th {
+border-style: none;
+}
+#gcbilhjtjt p {
+margin: 0;
+padding: 0;
+}
+#gcbilhjtjt .gt_table {
+display: table;
+border-collapse: collapse;
+line-height: normal;
+margin-left: auto;
+margin-right: auto;
+color: #333333;
+font-size: 16px;
+font-weight: normal;
+font-style: normal;
+background-color: #FFFFFF;
+width: auto;
+border-top-style: solid;
+border-top-width: 2px;
+border-top-color: #A8A8A8;
+border-right-style: none;
+border-right-width: 2px;
+border-right-color: #D3D3D3;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #A8A8A8;
+border-left-style: none;
+border-left-width: 2px;
+border-left-color: #D3D3D3;
+}
+#gcbilhjtjt .gt_caption {
+padding-top: 4px;
+padding-bottom: 4px;
+}
+#gcbilhjtjt .gt_title {
+color: #333333;
+font-size: 125%;
+font-weight: initial;
+padding-top: 4px;
+padding-bottom: 4px;
+padding-left: 5px;
+padding-right: 5px;
+border-bottom-color: #FFFFFF;
+border-bottom-width: 0;
+}
+#gcbilhjtjt .gt_subtitle {
+color: #333333;
+font-size: 85%;
+font-weight: initial;
+padding-top: 3px;
+padding-bottom: 5px;
+padding-left: 5px;
+padding-right: 5px;
+border-top-color: #FFFFFF;
+border-top-width: 0;
+}
+#gcbilhjtjt .gt_heading {
+background-color: #FFFFFF;
+text-align: center;
+border-bottom-color: #FFFFFF;
+border-left-style: none;
+border-left-width: 1px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 1px;
+border-right-color: #D3D3D3;
+}
+#gcbilhjtjt .gt_bottom_border {
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+}
+#gcbilhjtjt .gt_col_headings {
+border-top-style: solid;
+border-top-width: 2px;
+border-top-color: #D3D3D3;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+border-left-style: none;
+border-left-width: 1px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 1px;
+border-right-color: #D3D3D3;
+}
+#gcbilhjtjt .gt_col_heading {
+color: #333333;
+background-color: #FFFFFF;
+font-size: 100%;
+font-weight: normal;
+text-transform: inherit;
+border-left-style: none;
+border-left-width: 1px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 1px;
+border-right-color: #D3D3D3;
+vertical-align: bottom;
+padding-top: 5px;
+padding-bottom: 6px;
+padding-left: 5px;
+padding-right: 5px;
+overflow-x: hidden;
+}
+#gcbilhjtjt .gt_column_spanner_outer {
+color: #333333;
+background-color: #FFFFFF;
+font-size: 100%;
+font-weight: normal;
+text-transform: inherit;
+padding-top: 0;
+padding-bottom: 0;
+padding-left: 4px;
+padding-right: 4px;
+}
+#gcbilhjtjt .gt_column_spanner_outer:first-child {
+padding-left: 0;
+}
+#gcbilhjtjt .gt_column_spanner_outer:last-child {
+padding-right: 0;
+}
+#gcbilhjtjt .gt_column_spanner {
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+vertical-align: bottom;
+padding-top: 5px;
+padding-bottom: 5px;
+overflow-x: hidden;
+display: inline-block;
+width: 100%;
+}
+#gcbilhjtjt .gt_spanner_row {
+border-bottom-style: hidden;
+}
+#gcbilhjtjt .gt_group_heading {
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+color: #333333;
+background-color: #FFFFFF;
+font-size: 100%;
+font-weight: initial;
+text-transform: inherit;
+border-top-style: solid;
+border-top-width: 2px;
+border-top-color: #D3D3D3;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+border-left-style: none;
+border-left-width: 1px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 1px;
+border-right-color: #D3D3D3;
+vertical-align: middle;
+text-align: left;
+}
+#gcbilhjtjt .gt_empty_group_heading {
+padding: 0.5px;
+color: #333333;
+background-color: #FFFFFF;
+font-size: 100%;
+font-weight: initial;
+border-top-style: solid;
+border-top-width: 2px;
+border-top-color: #D3D3D3;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+vertical-align: middle;
+}
+#gcbilhjtjt .gt_from_md > :first-child {
+margin-top: 0;
+}
+#gcbilhjtjt .gt_from_md > :last-child {
+margin-bottom: 0;
+}
+#gcbilhjtjt .gt_row {
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+margin: 10px;
+border-top-style: solid;
+border-top-width: 1px;
+border-top-color: #D3D3D3;
+border-left-style: none;
+border-left-width: 1px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 1px;
+border-right-color: #D3D3D3;
+vertical-align: middle;
+overflow-x: hidden;
+}
+#gcbilhjtjt .gt_stub {
+color: #333333;
+background-color: #FFFFFF;
+font-size: 100%;
+font-weight: initial;
+text-transform: inherit;
+border-right-style: solid;
+border-right-width: 2px;
+border-right-color: #D3D3D3;
+padding-left: 5px;
+padding-right: 5px;
+}
+#gcbilhjtjt .gt_stub_row_group {
+color: #333333;
+background-color: #FFFFFF;
+font-size: 100%;
+font-weight: initial;
+text-transform: inherit;
+border-right-style: solid;
+border-right-width: 2px;
+border-right-color: #D3D3D3;
+padding-left: 5px;
+padding-right: 5px;
+vertical-align: top;
+}
+#gcbilhjtjt .gt_row_group_first td {
+border-top-width: 2px;
+}
+#gcbilhjtjt .gt_row_group_first th {
+border-top-width: 2px;
+}
+#gcbilhjtjt .gt_summary_row {
+color: #333333;
+background-color: #FFFFFF;
+text-transform: inherit;
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+}
+#gcbilhjtjt .gt_first_summary_row {
+border-top-style: solid;
+border-top-color: #D3D3D3;
+}
+#gcbilhjtjt .gt_first_summary_row.thick {
+border-top-width: 2px;
+}
+#gcbilhjtjt .gt_last_summary_row {
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+}
+#gcbilhjtjt .gt_grand_summary_row {
+color: #333333;
+background-color: #FFFFFF;
+text-transform: inherit;
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+}
+#gcbilhjtjt .gt_first_grand_summary_row {
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+border-top-style: double;
+border-top-width: 6px;
+border-top-color: #D3D3D3;
+}
+#gcbilhjtjt .gt_last_grand_summary_row_top {
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+border-bottom-style: double;
+border-bottom-width: 6px;
+border-bottom-color: #D3D3D3;
+}
+#gcbilhjtjt .gt_striped {
+background-color: rgba(128, 128, 128, 0.05);
+}
+#gcbilhjtjt .gt_table_body {
+border-top-style: solid;
+border-top-width: 2px;
+border-top-color: #D3D3D3;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+}
+#gcbilhjtjt .gt_footnotes {
+color: #333333;
+background-color: #FFFFFF;
+border-bottom-style: none;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+border-left-style: none;
+border-left-width: 2px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 2px;
+border-right-color: #D3D3D3;
+}
+#gcbilhjtjt .gt_footnote {
+margin: 0px;
+font-size: 90%;
+padding-top: 4px;
+padding-bottom: 4px;
+padding-left: 5px;
+padding-right: 5px;
+}
+#gcbilhjtjt .gt_sourcenotes {
+color: #333333;
+background-color: #FFFFFF;
+border-bottom-style: none;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+border-left-style: none;
+border-left-width: 2px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 2px;
+border-right-color: #D3D3D3;
+}
+#gcbilhjtjt .gt_sourcenote {
+font-size: 90%;
+padding-top: 4px;
+padding-bottom: 4px;
+padding-left: 5px;
+padding-right: 5px;
+}
+#gcbilhjtjt .gt_left {
+text-align: left;
+}
+#gcbilhjtjt .gt_center {
+text-align: center;
+}
+#gcbilhjtjt .gt_right {
+text-align: right;
+font-variant-numeric: tabular-nums;
+}
+#gcbilhjtjt .gt_font_normal {
+font-weight: normal;
+}
+#gcbilhjtjt .gt_font_bold {
+font-weight: bold;
+}
+#gcbilhjtjt .gt_font_italic {
+font-style: italic;
+}
+#gcbilhjtjt .gt_super {
+font-size: 65%;
+}
+#gcbilhjtjt .gt_footnote_marks {
+font-size: 75%;
+vertical-align: 0.4em;
+position: initial;
+}
+#gcbilhjtjt .gt_asterisk {
+font-size: 100%;
+vertical-align: 0;
+}
+#gcbilhjtjt .gt_indent_1 {
+text-indent: 5px;
+}
+#gcbilhjtjt .gt_indent_2 {
+text-indent: 10px;
+}
+#gcbilhjtjt .gt_indent_3 {
+text-indent: 15px;
+}
+#gcbilhjtjt .gt_indent_4 {
+text-indent: 20px;
+}
+#gcbilhjtjt .gt_indent_5 {
+text-indent: 25px;
+}
+#gcbilhjtjt .katex-display {
+display: inline-flex !important;
+margin-bottom: 0.75em !important;
+}
+#gcbilhjtjt div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top table" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="header gt_col_headings">
+<th id="package" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">package</th>
+<th id="cran" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">cran</th>
+<th id="local" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">local</th>
+<th id="behind" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">behind</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="package">broom</td>
+<td class="gt_row gt_right" headers="cran">1.0.7</td>
+<td class="gt_row gt_right" headers="local">1.0.7</td>
+<td class="gt_row gt_center" headers="behind">FALSE</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="package">conflicted</td>
+<td class="gt_row gt_right" headers="cran">1.2.0</td>
+<td class="gt_row gt_right" headers="local">1.2.0</td>
+<td class="gt_row gt_center" headers="behind">FALSE</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="package">dbplyr</td>
+<td class="gt_row gt_right" headers="cran">2.5.0</td>
+<td class="gt_row gt_right" headers="local">2.5.0</td>
+<td class="gt_row gt_center" headers="behind">FALSE</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="package">dplyr</td>
+<td class="gt_row gt_right" headers="cran">1.1.4</td>
+<td class="gt_row gt_right" headers="local">1.1.4</td>
+<td class="gt_row gt_center" headers="behind">FALSE</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="package">dtplyr</td>
+<td class="gt_row gt_right" headers="cran">1.3.1</td>
+<td class="gt_row gt_right" headers="local">1.3.1</td>
+<td class="gt_row gt_center" headers="behind">FALSE</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="package">forcats</td>
+<td class="gt_row gt_right" headers="cran">1.0.0</td>
+<td class="gt_row gt_right" headers="local">1.0.0</td>
+<td class="gt_row gt_center" headers="behind">FALSE</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="package">ggplot2</td>
+<td class="gt_row gt_right" headers="cran">3.5.1</td>
+<td class="gt_row gt_right" headers="local">3.5.1</td>
+<td class="gt_row gt_center" headers="behind">FALSE</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="package">googledrive</td>
+<td class="gt_row gt_right" headers="cran">2.1.1</td>
+<td class="gt_row gt_right" headers="local">2.1.1</td>
+<td class="gt_row gt_center" headers="behind">FALSE</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="package">googlesheets4</td>
+<td class="gt_row gt_right" headers="cran">1.1.1</td>
+<td class="gt_row gt_right" headers="local">1.1.1</td>
+<td class="gt_row gt_center" headers="behind">FALSE</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="package">haven</td>
+<td class="gt_row gt_right" headers="cran">2.5.4</td>
+<td class="gt_row gt_right" headers="local">2.5.4</td>
+<td class="gt_row gt_center" headers="behind">FALSE</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="package">hms</td>
+<td class="gt_row gt_right" headers="cran">1.1.3</td>
+<td class="gt_row gt_right" headers="local">1.1.3</td>
+<td class="gt_row gt_center" headers="behind">FALSE</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="package">httr</td>
+<td class="gt_row gt_right" headers="cran">1.4.7</td>
+<td class="gt_row gt_right" headers="local">1.4.7</td>
+<td class="gt_row gt_center" headers="behind">FALSE</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="package">jsonlite</td>
+<td class="gt_row gt_right" headers="cran">1.8.9</td>
+<td class="gt_row gt_right" headers="local">1.8.9</td>
+<td class="gt_row gt_center" headers="behind">FALSE</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="package">lubridate</td>
+<td class="gt_row gt_right" headers="cran">1.9.3</td>
+<td class="gt_row gt_right" headers="local">1.9.3</td>
+<td class="gt_row gt_center" headers="behind">FALSE</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="package">magrittr</td>
+<td class="gt_row gt_right" headers="cran">2.0.3</td>
+<td class="gt_row gt_right" headers="local">2.0.3</td>
+<td class="gt_row gt_center" headers="behind">FALSE</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="package">modelr</td>
+<td class="gt_row gt_right" headers="cran">0.1.11</td>
+<td class="gt_row gt_right" headers="local">0.1.11</td>
+<td class="gt_row gt_center" headers="behind">FALSE</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="package">pillar</td>
+<td class="gt_row gt_right" headers="cran">1.9.0</td>
+<td class="gt_row gt_right" headers="local">1.9.0</td>
+<td class="gt_row gt_center" headers="behind">FALSE</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="package">purrr</td>
+<td class="gt_row gt_right" headers="cran">1.0.2</td>
+<td class="gt_row gt_right" headers="local">1.0.2</td>
+<td class="gt_row gt_center" headers="behind">FALSE</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="package">ragg</td>
+<td class="gt_row gt_right" headers="cran">1.3.3</td>
+<td class="gt_row gt_right" headers="local">1.3.3</td>
+<td class="gt_row gt_center" headers="behind">FALSE</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="package">readr</td>
+<td class="gt_row gt_right" headers="cran">2.1.5</td>
+<td class="gt_row gt_right" headers="local">2.1.5</td>
+<td class="gt_row gt_center" headers="behind">FALSE</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="package">readxl</td>
+<td class="gt_row gt_right" headers="cran">1.4.3</td>
+<td class="gt_row gt_right" headers="local">1.4.3</td>
+<td class="gt_row gt_center" headers="behind">FALSE</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="package">reprex</td>
+<td class="gt_row gt_right" headers="cran">2.1.1</td>
+<td class="gt_row gt_right" headers="local">2.1.1</td>
+<td class="gt_row gt_center" headers="behind">FALSE</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="package">rlang</td>
+<td class="gt_row gt_right" headers="cran">1.1.4</td>
+<td class="gt_row gt_right" headers="local">1.1.4</td>
+<td class="gt_row gt_center" headers="behind">FALSE</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="package">rvest</td>
+<td class="gt_row gt_right" headers="cran">1.0.4</td>
+<td class="gt_row gt_right" headers="local">1.0.4</td>
+<td class="gt_row gt_center" headers="behind">FALSE</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="package">stringr</td>
+<td class="gt_row gt_right" headers="cran">1.5.1</td>
+<td class="gt_row gt_right" headers="local">1.5.1</td>
+<td class="gt_row gt_center" headers="behind">FALSE</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="package">tibble</td>
+<td class="gt_row gt_right" headers="cran">3.2.1</td>
+<td class="gt_row gt_right" headers="local">3.2.1</td>
+<td class="gt_row gt_center" headers="behind">FALSE</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="package">tidyr</td>
+<td class="gt_row gt_right" headers="cran">1.3.1</td>
+<td class="gt_row gt_right" headers="local">1.3.1</td>
+<td class="gt_row gt_center" headers="behind">FALSE</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="package">xml2</td>
+<td class="gt_row gt_right" headers="cran">1.3.6</td>
+<td class="gt_row gt_right" headers="local">1.3.6</td>
+<td class="gt_row gt_center" headers="behind">FALSE</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div></div></div><bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z" /></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init>bslib.Card.initializeAllCards();</script></div>
+</div>
+</div>
 
 
 <script id="quarto-html-after-body" type="application/javascript">

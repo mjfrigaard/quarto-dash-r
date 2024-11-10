@@ -1,0 +1,83 @@
+---
+title: Basic Quarto Dashboard Layout
+subtitle: rows, columns, and cards
+format: dashboard
+---
+
+```{r}
+#| label: setup
+#| include: false
+# if (!require(pak)) install.packages('pak')
+# pak::pak('lobstr')
+library(lobstr)
+```
+
+
+## Row {height=50%}
+
+```{r}
+lobstr::ast(
+  orientatin('rows',
+  row('height=50%',
+      code(),
+      'text',
+      column('width=50%',
+        'text'),
+      column('width=50%',
+        code()
+        )
+      ),
+  row('height=50%',
+      card(
+        'text', 
+        code()
+        ),
+      card(
+        code()
+      )
+    )
+  )
+)
+```
+
+Text  *inside* the `## Row`...
+
+...but  *outside* the `### Column`
+
+### Column {width=50%}
+
+Text *inside* the `### Column`...
+
+...and *inside* the `## Row`.
+
+### Column {width=50%}
+
+```{r}
+#| eval: true 
+#| echo: true
+# code inside a column 
+# (inside a row)
+library(tidyverse)
+```
+
+## Row {height=50%}
+
+::: {.card}
+Create a `{.card}` div with text like:  
+```{verbatim}
+::: {.card}
+Text inside a card (inside a row)
+:::
+```
+:::
+
+::: {.card}
+```{r}
+#| echo: true
+# code inside a card (inside a row) looks like:
+tidyverse_logo()
+```
+:::
+
+
+

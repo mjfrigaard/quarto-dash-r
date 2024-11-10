@@ -1,0 +1,36 @@
+---
+title: Quarto Dashboard Layouts
+subtitle: Basic column layout
+format: 
+  dashboard:
+    embed-resources: true
+    orientation: columns
+---
+
+## Column {width=30%}
+
+Install `tidyverse`
+
+```{r}
+#| eval: false
+#| echo: true
+install.packages('tidyverse')
+```
+
+Load `tidyverse`
+
+```{r}
+#| eval: false
+#| echo: true
+library(tidyverse)
+```
+
+
+## Column {width=60%}
+
+Use `tidyverse`
+
+```{r}
+tidyverse::tidyverse_logo()
+```
+

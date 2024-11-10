@@ -1,0 +1,45 @@
+---
+title: Quarto Dashboard Layouts
+subtitle: Column & row layout
+format: 
+  dashboard:
+    embed-resources: true
+    orientation: columns
+---
+
+
+## Column {width=50%}
+
+### Row {height=70%}
+
+```{r}
+cat('Row {height=70%}')
+```
+
+```{r}
+cat('2nd code chunk')
+```
+
+### Row {height=30%}
+
+```{r}
+cat('Row {height=30%}')
+```
+
+## Column {width=50%}
+
+### Row {height=30%}
+
+```{r}
+cat('Row {height=30%}')
+```
+
+### Row {height=70%}
+
+```{r}
+cat('Row {height=70%}')
+```
+
+```{r}
+cat('2nd code chunk')
+```
