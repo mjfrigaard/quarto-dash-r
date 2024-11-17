@@ -10,6 +10,10 @@ This repo has example Quarto dashboards written in R. More information can be fo
 
 The dashboards in this repo have been adapted from a variety of sources.
 
+### Page layout
+
+page-layout.qmd
+
 ### Basic row layout
 
 [basic-row-layout.qmd](https://github.com/mjfrigaard/quarto-dash-r/blob/main/basic-row-layout.qmd)

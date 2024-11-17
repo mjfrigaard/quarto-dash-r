@@ -1,0 +1,31 @@
+/*-- scss:defaults --*/
+
+// colors
+
+$navbar-bg: #113847;
+$navbar-fg: #FFFFFF;
+
+$link-color: #4A5B65;
+$hover-color: lighten($link-color, 40%);
+
+/*-- scss:rules --*/
+.card-header {
+  background-color: #21475A;
+  color: #FFFFFF;
+}
+
+.nav-item > a:hover {
+  color: #88AAC6;
+}
+
+.nav-link {
+  color: #FFFFFF;
+}
+
+.tabset .nav-link {
+  color: #FFFFFF;
+}
+
+.value-box {
+  text-align: center;
+}

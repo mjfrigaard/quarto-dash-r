@@ -19,7 +19,7 @@ format:
 
 ### Column {width=30%}
 
-This dashboard displays the Nav Items from the YAML frontmatter. 
+The dashboard navigation bar can display an icon and buttons from the YAML frontmatter. 
 
 ### Column {width=70%}
 
@@ -37,7 +37,7 @@ format:
 
 ### Column {width=30%}
 
-We can include icons with accompanying hyperlinks.
+Buttons can be icons with accompanying hyperlinks.
 
 ### Column {width=70%}
 
@@ -55,7 +55,7 @@ format:
 
 ### Column {width=30%}
 
-We can also include other Nav Items: 
+We can also include other HTML attributes (like [`target`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-target)): 
 
 ### Column {width=70%}
 

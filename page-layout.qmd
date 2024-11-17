@@ -1,0 +1,113 @@
+---
+title: Basic Quarto Dashboard Layout
+subtitle: Pages, rows, columns, and cards
+format:
+  dashboard:
+    embed-resources: true
+    
+---
+
+```{r}
+#| label: setup
+#| include: false
+# if (!require(pak)) install.packages('pak')
+# pak::pak('lobstr')
+library(lobstr)
+library(tidyverse)
+library(reactable)
+```
+
+# Page (row layout)
+
+## Row {height=20%}
+
+### Column {width=50%}
+
+```{r}
+#| title: Install
+#| eval: false 
+#| echo: true
+install.packages('tidyverse')
+```
+
+### Column {width=50%}
+
+```{r}
+#| title: Load
+#| eval: true 
+#| echo: true
+library(tidyverse)
+```
+
+## Row {height=80%}
+
+### Column {width=40%}
+
+```{r}
+#| title: Logo
+#| eval: true 
+tidyverse_logo()
+```
+
+### Column {width=60%}
+
+```{r}
+#| title: Packages
+#| eval: true 
+#| echo: true
+#| code-fold: true 
+#| code-summary: 'show/hide tibble/reactable code'
+tibble(
+  packages = tidyverse_packages()
+  ) |> 
+  reactable(
+    highlight = TRUE, 
+    striped = TRUE, 
+    compact = TRUE,
+    defaultPageSize = 15)
+```
+
+# Page (column layout) {orientation="columns"}
+
+## Column {width=45%}
+
+```{r}
+#| title: Dependencies
+#| echo: true
+#| code-fold: true 
+#| code-summary: 'show/hide tibble/reactable code'
+reactable(tidyverse_deps(), 
+    highlight = TRUE, 
+    striped = TRUE, 
+    compact = TRUE,
+    defaultPageSize = 15)
+```
+
+## Column {width=55%}
+
+### Row {height=20%}
+
+::: {.card}
+Cards can also be given a `title`:  
+```{verbatim}
+::: {.card title="Sitrep"}
+tidyverse_sitrep()
+:::
+```
+:::
+
+### Row {height=60%}
+
+::: {.card title="Sitrep"}
+```{r}
+tidyverse_sitrep()
+```
+:::
+
+### Row {height=20%}
+
+::: {.card title="Conflicts"}
+```{r}
+tidyverse_conflicts()
+```
+:::

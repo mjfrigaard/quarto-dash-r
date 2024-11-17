@@ -1,0 +1,149 @@
+---
+title: Quarto Dashboard Layouts
+format: 
+  dashboard:
+    embed-resources: true
+    orientation: rows
+    
+---
+
+```{r}
+#| label: setup
+#| include: false
+# if (!require(pak)) install.packages('pak')
+# pak::pak('lobstr')
+library(lobstr)
+library(tidyverse)
+library(reactable)
+```
+
+
+# Page 1 (rows)
+
+## Row {height=20%}
+
+### Column {width=35%}
+
+```{r}
+#| eval: false
+#| echo: true
+install.packages('tidyverse')
+```
+
+### Column {width=25%}
+
+```{r}
+#| eval: true
+#| echo: true
+library(tidyverse)
+```
+
+### Column {width=40%}
+
+```{r}
+tidyverse_logo()
+```
+
+## Row {height=80%}
+
+### Column {.tabset}
+
+```{r}
+#| title: Packages
+tibble(packages = tidyverse_packages()) |> 
+  reactable(
+    highlight = TRUE, 
+    striped = TRUE, 
+    compact = TRUE,
+    defaultPageSize = 15)
+```
+
+```{r}
+#| title: Dependencies
+reactable(tidyverse_deps(), 
+    highlight = TRUE, 
+    striped = TRUE, 
+    compact = TRUE, 
+    defaultPageSize = 15)
+```
+
+### Column 
+
+#### Row {height=70%}
+
+::: {.card title="Sit-rep"}
+
+```{r}
+tidyverse_sitrep()
+```
+
+:::
+
+#### Row {height=30%}
+
+::: {.card title="Conflicts"}
+
+```{r}
+tidyverse_conflicts()
+```
+
+:::
+
+# Page 2 (columns) {orientation="columns"}
+
+## Column {width=55%}
+
+```{r}
+#| title: Packages
+#| echo: true
+#| code-fold: true 
+#| code-summary: 'show/hide tibble/reactable code'
+tibble(packages = tidyverse_packages()) |> 
+  reactable(
+    highlight = TRUE, 
+    striped = TRUE, 
+    compact = TRUE)
+```
+
+```{r}
+#| title: Dependencies
+#| echo: true
+#| code-fold: true 
+#| code-summary: 'show/hide tibble/reactable code'
+reactable(tidyverse_deps(), 
+    highlight = TRUE, 
+    striped = TRUE, 
+    compact = TRUE)
+```
+
+## Column {width=45%}
+
+### Row {height=20%}
+
+::: {.card title="Logo"}
+ 
+```{r}
+tidyverse_logo()
+```
+
+:::
+
+### Row {height=60%}
+
+::: {.card title="Sit-rep"}
+
+```{r}
+tidyverse_sitrep()
+```
+
+:::
+
+### Row {height=20%}
+
+::: {.card title="Conflicts"}
+
+```{r}
+tidyverse_conflicts()
+```
+
+:::

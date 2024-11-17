@@ -1,0 +1,235 @@
+---
+title: Quarto Dashboard Styling
+subtitle: basic SCSS variables
+format:
+  dashboard:
+    embed-resources: true
+    orientation: columns
+    theme:
+      - cosmo
+      - basic.scss
+    fig-dpi: 320
+    fig-align: center
+    fig-width: 7
+    fig-asp: 0.618
+
+knitr:
+  opts_chunk: 
+    echo: false
+    dev: "ragg_png"
+    
+---
+
+```{r setup, include=FALSE}
+# load necessary libraries
+library(ggplot2)
+library(dplyr)
+library(reactable)
+library(vroom) 
+library(gtsummary)
+library(paletteer)
+library(pals)
+```
+
+```{r}
+#| label: pockets
+#| include: false
+pockets <- vroom::vroom('https://raw.githubusercontent.com/the-pudding/data/refs/heads/master/pockets/measurements.csv') |> 
+  dplyr::mutate(
+    brand = stringr::str_replace_all(brand,
+      pattern = "7 for all Mankind", 
+      replacement =  "7 For All Mankind"),
+    brand = stringr::str_replace_all(brand,
+      pattern = "7 for All Mankind", 
+      replacement = "7 For All Mankind"),
+  )
+# unique(pockets$brand)
+glimpse(pockets)
+# color palette: 
+dinner_palette <- c("#88AAC6", "#113847", "#4A5B65", "#D6E3EC", "#21475A")
+```
+
+## Column {width=55%}
+
+### Row {height=50%}
+
+```{r}
+#| title: Cost of jeans
+pockets |>
+  dplyr::group_by(menWomen, brand, style) |>
+  dplyr::summarise(
+    .groups = "drop",
+    `Avg Price` = mean(price, na.rm = TRUE)
+  ) |>
+  ggplot2::ggplot(
+    ggplot2::aes(
+      y = brand,
+      x = `Avg Price`
+    )
+  ) +
+  ggplot2::geom_col(aes(fill = style),
+    show.legend = TRUE
+  ) +
+  ggplot2::scale_x_continuous("Cost",
+    breaks = scales::breaks_extended(4),
+    labels = scales::label_dollar()
+  ) +
+  paletteer::scale_fill_paletteer_d("severance::Dinner") +
+  ggplot2::facet_wrap(. ~ menWomen) +
+  ggplot2::labs(
+    title = "Average Cost",
+    subtitle = "Price of jeans by style and brand",
+    caption = "from https://pudding.cool/2018/08/pockets/",
+    x = "Cost", 
+    y = "Brand",
+    fill = "Style"
+  ) +
+  ggplot2::theme_minimal() +
+  ggplot2::theme(
+    axis.ticks.x = ggplot2::element_blank(),
+    axis.ticks.y = ggplot2::element_blank(),
+    axis.line = ggplot2::element_blank(),
+    legend.position = "top"
+  )
+```
+
+### Row {height=50%}
+
+```{r}
+pockets |>
+  tidyr::separate_longer_delim(
+    fabric, 
+    delim = ",") |>
+  tidyr::separate_wider_delim(
+    fabric,
+    delim = "%",
+    names = c("fabric_percent", "fabric")
+  ) |> 
+  dplyr::mutate(
+    fabric_percent = as.numeric(fabric_percent),
+    fabric_percent = fabric_percent*0.01
+  ) |> 
+  ggplot2::ggplot(
+    ggplot2::aes(
+      y = brand,
+      x = fabric_percent,
+    )
+  ) +
+  ggplot2::geom_col(aes(fill = fabric),
+    show.legend = TRUE
+  ) +
+  ggplot2::facet_wrap(. ~ menWomen) +
+  paletteer::scale_fill_paletteer_d("severance::Dinner") +
+  ggplot2::labs(
+    title = "Pocket measurements",
+    subtitle = "Difference in pocket measurements (max - min)",
+    caption = "from https://pudding.cool/2018/08/pockets/",
+    x = "Average diff",
+    y = "Brand",
+    fill = "Style"
+  ) +
+  ggplot2::theme_minimal() +
+  ggplot2::theme(
+    axis.ticks.x = ggplot2::element_blank(),
+    axis.ticks.y = ggplot2::element_blank(),
+    axis.line = ggplot2::element_blank(),
+    legend.position = "top"
+  )
+```
+
+```{r}
+#| title: Pocket measurements by style
+#| eval: false
+#| include: false
+pockets |>
+  dplyr::group_by(menWomen, brand, style) |>
+  dplyr::reframe(
+    front_height_diff = maxHeightFront - minHeightFront,
+    front_width_diff = maxWidthFront - minWidthFront,
+    back_height_diff = maxHeightBack - minHeightBack,
+    back_width_diff = maxWidthBack - minWidthBack
+  ) |>
+  tidyr::pivot_longer(
+    cols = c(
+      front_height_diff, front_width_diff,
+      back_height_diff, back_width_diff
+    ),
+    names_to = "measure",
+    values_to = "value"
+  ) |>
+  dplyr::group_by(menWomen, brand, style) |>
+  dplyr::summarise(
+    `Measurement avg. dff` = mean(value, na.rm = TRUE),
+    .groups = "drop"
+  ) |>
+  ggplot2::ggplot(
+    ggplot2::aes(
+      y = brand,
+      x = `Measurement avg. dff`
+    )
+  ) +
+  ggplot2::geom_col(aes(fill = style),
+    show.legend = TRUE
+  ) +
+  ggplot2::facet_wrap(. ~ menWomen) +
+  paletteer::scale_fill_paletteer_d("severance::Dinner") +
+  ggplot2::labs(
+    title = "Pocket measurements",
+    subtitle = "Difference in pocket measurements (max - min)",
+    caption = "from https://pudding.cool/2018/08/pockets/",
+    x = "Average diff",
+    y = "Brand",
+    fill = "Style"
+  ) +
+  ggplot2::theme_minimal() +
+  ggplot2::theme(
+    axis.ticks.x = ggplot2::element_blank(),
+    axis.ticks.y = ggplot2::element_blank(),
+    axis.line = ggplot2::element_blank(),
+    legend.position = "top"
+  )
+```
+
+
+## Column {width=45%}
+
+### Row - Value boxes {height=30%}
+
+::: {.valuebox icon="gender-male" color="#88AAC6"}
+
+Average Price of Men's Jeans
+
+`{r} scales::dollar(mean(dplyr::filter(pockets, menWomen == "men")$price, na.rm = TRUE))`
+:::
+
+::: {.valuebox icon="gender-female" color="#D6E3EC"}
+
+Average Price of Women's Jeans
+
+`{r} scales::dollar(mean(dplyr::filter(pockets, menWomen == "women")$price, na.rm = TRUE))`
+
+:::
+
+### Row - Tabsets of tables {height=70% .tabset}
+
+::: {.card title="Mens jeans"}
+
+```{r}
+filter(pockets, menWomen == "men") |>  
+  select(style, name, fabric) |> 
+  gt::gt()
+```
+:::
+
+::: {.card title="Womens jeans"}
+
+```{r}
+filter(pockets, menWomen == "women") |>  
+  select(style, name, fabric) |> 
+  gt::gt()
+```
+:::
+
+
+
+
