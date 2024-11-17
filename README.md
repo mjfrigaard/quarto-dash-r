@@ -6,13 +6,13 @@ This repo has example Quarto dashboards written in R. More information can be fo
 
 [^readme-2]: Mine Çetinkaya-Rundel has an excellent three part tutorial on Posit's YouTube channel ([part 1](https://youtu.be/HW7QbqI4fH0?si=WuBui8y9uRjOVQzD), [part 2](https://www.youtube.com/watch?v=KdsQgwaY950), [part 3](https://www.youtube.com/watch?v=NigWSB-jG4Y&t=112s)).
 
-## Dashboards
+## Dashboard layouts
 
-The dashboards in this repo have been adapted from a variety of sources.
+Below are example dashboard layouts. Most features are included, but consult the [official documentation](https://quarto.org/docs/dashboards/) for more information.
 
 ### Page layout
 
-page-layout.qmd
+[page-layout.qmd](https://github.com/mjfrigaard/quarto-dash-r/blob/main/page-layout.qmd)
 
 ### Basic row layout
 
@@ -49,3 +49,11 @@ page-layout.qmd
 [navbar-layout.qmd](https://github.com/mjfrigaard/quarto-dash-r/blob/main/navbar-layout.qmd)
 
 ![](img/navbar_layout.png)
+
+### All layout features
+
+[layouts.qmd](https://github.com/mjfrigaard/quarto-dash-r/blob/main/layouts.qmd)
+
+![](img/layouts_p1.png)
+
+![](img/layouts_p2.png)
