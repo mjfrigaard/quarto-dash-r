@@ -14,6 +14,10 @@ Below are example dashboard layouts. Most features are included, but consult the
 
 [page-layout.qmd](https://github.com/mjfrigaard/quarto-dash-r/blob/main/page-layout.qmd)
 
+![](img/page_layout_p1.png)
+
+![](img/page_layout_p2.png)
+
 ### Basic row layout
 
 [basic-row-layout.qmd](https://github.com/mjfrigaard/quarto-dash-r/blob/main/basic-row-layout.qmd)
