@@ -10,6 +10,13 @@
       * [Tabset layout](#tabset-layout)
       * [Navbar layout](#navbar-layout)
       * [All layout features](#all-layout-features)
+   * [Styling](#styling)
+      * [External SCSS file](#external-scss-file)
+      * [Internal styling](#internal-styling)
+      * [Custom elements](#custom-elements)
+   * [Reactivity](#reactivity)
+      * [Modules](#modules)
+
 
 This repo has example Quarto dashboards written in R. More information can be found in the official documentation[^readme-1] and the tutorial on YouTube.[^readme-2]
 
@@ -72,3 +79,18 @@ Below are example dashboard layouts. Most features are included, but consult the
 ![](img/layouts_p1.png)
 
 ![](img/layouts_p2.png)
+
+## Styling 
+
+The dashboards below all contain various types/layers of styling with CSS/SCSS. 
+
+### External SCSS file 
+
+### Internal styling 
+
+### Custom elements 
+
+## Reactivity 
+
+### Modules 
+
